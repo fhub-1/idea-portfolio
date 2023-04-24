@@ -12,7 +12,7 @@ const Pwani = () => {
         Software Developer{" "}
         <span className="text-textGreen tracking-wide">@Pwani Teknowgalz</span>
       </h3>
-      <p className="text-sm mt-1 font-medium text-textDark ">Jan - Present</p>
+      <p className="text-sm mt-1 font-medium text-textDark ">Jan - Present/Part time</p>
       <ul className="mt-6 flex flex-col gap-3">
         <li className="flex gap-2 text-base font-titleFonts text-textDark">
           <span className="text-textGreen mt-1">

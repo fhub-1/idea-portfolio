@@ -37,24 +37,30 @@ const Experience = () => {
           <li
             onClick={handleKitech}
             className={`${
-              workKitech ? "border-l-textGreen" : "border-l-textDark"
-            } border-l-2  bg-transparent hover:bg-hoverColor py-3 text-sm border-l-textGreen text-textDark cursor-pointer duration-300 px-8 font-medium`}
+              workKitech
+                ? "border-l-textGreen text-textGreen"
+                : "border-l-hoverColor text-textDark"
+            } border-l-2  bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
           >
             Kitech solutions
           </li>
           <li
             onClick={handlePwani}
             className={`${
-              workPwani ? "border-l-textGreen" : "border-l-textDark"
-            } border-l-2  bg-transparent hover:bg-hoverColor py-3 text-sm border-l-textGreen text-textDark cursor-pointer duration-300 px-8 font-medium`}
+              workPwani
+                ? "border-l-textGreen text-textGreen"
+                : "border-l-hoverColor text-textDark"
+            } border-l-2  bg-transparent hover:bg-[#112240] py-3 text-sm   cursor-pointer duration-300 px-8 font-medium`}
           >
             Pwani Teknowgalz
           </li>
           <li
             onClick={handleTech}
             className={`${
-              workTech ? "border-l-textGreen" : "border-l-textDark"
-            } border-l-2  bg-transparent hover:bg-hoverColor py-3 text-sm border-l-textGreen text-textDark cursor-pointer duration-300 px-8 font-medium`}
+              workTech
+                ? "border-l-textGreen text-textGreen"
+                : "border-l-hoverColor text-textDark"
+            } border-l-2  bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
           >
             Tech kidz
           </li>

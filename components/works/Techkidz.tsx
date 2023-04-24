@@ -12,7 +12,9 @@ const Techkidz = () => {
         Software Developer
         <span className="text-textGreen tracking-wide">@Tech Kidz Africa</span>
       </h3>
-      <p className="text-sm mt-1 font-medium text-textDark ">Jan - Present</p>
+      <p className="text-sm mt-1 font-medium text-textDark ">
+        Jully 2017 - Aug 2021
+      </p>
       <ul className="mt-6 flex flex-col gap-3">
         <li className="flex gap-2 text-base font-titleFonts text-textDark">
           <span className="text-textGreen mt-1">
@@ -21,8 +23,8 @@ const Techkidz = () => {
           As a front-end developer and mobile developer at Tech Kidz Africa, I
           had the opportunity to work with a team of passionate individuals who
           were dedicated to empowering young kids with tech skills. My role
-          involved developing and maintaining the company&#39;s website, as well as
-          teaching kids aged between 7 to 18 years on web and mobile app
+          involved developing and maintaining the company&#39;s website, as well
+          as teaching kids aged between 7 to 18 years on web and mobile app
           development.
         </li>
         <li className="flex gap-2 text-base font-titleFonts text-textDark">
