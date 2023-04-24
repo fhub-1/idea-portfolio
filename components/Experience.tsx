@@ -43,20 +43,20 @@ const Experience = () => {
             Kitech solutions
           </li>
           <li
-            onClick={handleTech}
-            className={`${
-              workTech ? "border-l-textGreen" : "border-l-textDark"
-            } border-l-2  bg-transparent hover:bg-hoverColor py-3 text-sm border-l-textGreen text-textDark cursor-pointer duration-300 px-8 font-medium`}
-          >
-            Tech kidz
-          </li>
-          <li
             onClick={handlePwani}
             className={`${
               workPwani ? "border-l-textGreen" : "border-l-textDark"
             } border-l-2  bg-transparent hover:bg-hoverColor py-3 text-sm border-l-textGreen text-textDark cursor-pointer duration-300 px-8 font-medium`}
           >
             Pwani Teknowgalz
+          </li>
+          <li
+            onClick={handleTech}
+            className={`${
+              workTech ? "border-l-textGreen" : "border-l-textDark"
+            } border-l-2  bg-transparent hover:bg-hoverColor py-3 text-sm border-l-textGreen text-textDark cursor-pointer duration-300 px-8 font-medium`}
+          >
+            Tech kidz
           </li>
         </ul>
         {workKitech && <Kitech />}
