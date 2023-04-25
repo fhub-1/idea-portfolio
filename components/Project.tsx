@@ -89,10 +89,10 @@ const Project = () => {
               />
             </div>
           </Link>
-          <div className="w-full xl:w-1/2 flex flex-col gap-6 lgl:justify-between items-end text-right xl:-ml-16 z-10">
+          <div className="w-full xl:w-1/2 flex flex-col gap-6 lgl:justify-between items-end text-right  z-10">
             <p className="text-textGreen text-sm tracking-wide">ip tracker</p>
             <h3 className="text-2xl font-bold uppercase">IP ADDRESS TRACKER</h3>
-            <p className="bg-[#112240] text-sm md:text-base p-2 md:p-6 rounded-md">
+            <p className="bg-[#112240] text-sm md:text-base xl:-mr-16 p-2 md:p-6 rounded-md">
               Upon landing on the website, the user is presented with a homepage
               that contains a banPner image with a{" "}
               <span className="text-textGreen">call-to-action</span> button that
