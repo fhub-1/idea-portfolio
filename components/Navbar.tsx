@@ -61,7 +61,7 @@ const Navbar = () => {
                 </motion.li>
               </Link>
               <Link
-                href="#project"
+                href="#work"
                 className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
               >
                 <motion.li
@@ -69,11 +69,11 @@ const Navbar = () => {
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.1, delay: 0.31 }}
                 >
-                  <span className="text-textGreen">03.</span>Project
+                  <span className="text-textGreen">03.</span>work
                 </motion.li>
               </Link>
               <Link
-                href="#Blog"
+                href="#blog"
                 className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
               >
                 <motion.li
@@ -97,7 +97,7 @@ const Navbar = () => {
                 </motion.li>
               </Link>
             </ul>
-            <a href="/assets/resume.pdf" target="_blank">
+            <Link href="/assets/resume.pdf" target="_blank">
               <motion.button
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -106,7 +106,7 @@ const Navbar = () => {
               >
                 Resume
               </motion.button>
-            </a>
+            </Link>
           </div>
           {/* menu icons */}
           <div className="w-6 -h-5 flex flex-col justify-between items-center mdl:hidden text-4xl text-textGreen cursor-pointer overflow-hidden group">

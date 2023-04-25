@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -31,15 +32,15 @@ const Banner = () => {
         transition={{ duration: 0.5, delay: 0.8 }}
         className="text-base md:max-w-[650px] text-textDark font-medium"
       >
-        Hello. My name’s Joseph maluki Kitheka and I&rsquo;m 24 years old. I was
-        always curious about software development and technology, so I went to
-        Coursera with a double major in front-end development and computer
-        science.{" "}
-        <a>
+        I&#39;m an experienced software developer with a diverse skill-set and
+        proficiency in various platforms, languages, and embedded systems. I
+        excel both as a self-manager and team player. I also have experience in
+        content creation on YouTube.
+        <Link href="#about">
           <span className="text-textGreen inline-flex h-7 relative cursor-pointer overflow-x-hidden group">
             Learn more
           </span>
-        </a>
+        </Link>
         <span className="absolute w-full h-[1px] left-0 bottom-1 -translate-x-[110px] group-hover:translate-x-0 transition-transform duration-300"></span>
       </motion.p>
       <motion.button
