@@ -2,10 +2,11 @@ import About from "@/components/About";
 import Alert from "@/components/Alert";
 import Banner from "@/components/Banner";
 import Experience from "@/components/Experience";
+import GithubRep from "@/components/GithubRep";
 import LeftSIder from "@/components/LeftSIder";
 import Navbar from "@/components/Navbar";
 import Project from "@/components/Project";
-import RightSide from "@/components/RightSide";
+import RightSide from "@/components/RightSide"; 
 import { motion } from "framer-motion";
 import Head from "next/head";
 
@@ -31,6 +32,10 @@ export default function Home() {
             <Experience />
             {/* project */}
             <Project />
+            {/* github reps */}
+            <GithubRep />
+            {/* news letter */}
+           
             {/* footer */}
           </div>
           <motion.div
