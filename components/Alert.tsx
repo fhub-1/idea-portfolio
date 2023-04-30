@@ -1,5 +1,8 @@
+import { useState } from "react";
 
 function Alert() {
+  const [isClose, setIsClose] = useState();
+
   return (
     <div className="bg-textDark">
       <div className="max-w-screen-xl mx-auto px-4 py-3 flex items-start justify-between text-white md:px-8">
@@ -28,7 +31,7 @@ function Alert() {
             </a>
           </p>
         </div>
-        <button className="p-2 rounded-lg duration-150 hover:bg-textGreen ring-offset-2 focus:ring">
+        <button className="p-2 rounded-lg duration-150 hover:bg-textGreen ring-offset-2 focus:ring cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"

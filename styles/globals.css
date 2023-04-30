@@ -5,6 +5,9 @@
 body, html{
   @apply font-titleFonts;
 }
+.active{
+  color: aqua;
+}
 
 /* :root {
   --foreground-rgb: 0, 0, 0;

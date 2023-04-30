@@ -3,9 +3,28 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef, useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 
 const Navbar = () => {
+  const ref = useRef<string | any>("");
+  const [showMenu, setShowMenu] = useState(false);
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+    // update the class name of the clicked link
+    const links = document.querySelectorAll(".nav-link");
+    links.forEach((link) => {
+      link.classList.remove("active");
+    });
+    e.currentTarget.classList.add("active");
+  };
+
   return (
     <>
       <Head>
@@ -26,6 +45,7 @@ const Navbar = () => {
             <ul className="flex text-[13px] gap-7 font-bodyFont">
               <Link
                 href="#home"
+                onClick={handleScroll}
                 className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
               >
                 <motion.li
@@ -38,6 +58,7 @@ const Navbar = () => {
               </Link>
               <Link
                 href="#about"
+                onClick={handleScroll}
                 className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
               >
                 <motion.li
@@ -50,6 +71,7 @@ const Navbar = () => {
               </Link>
               <Link
                 href="#experience"
+                onClick={handleScroll}
                 className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
               >
                 <motion.li
@@ -62,6 +84,7 @@ const Navbar = () => {
               </Link>
               <Link
                 href="#work"
+                onClick={handleScroll}
                 className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
               >
                 <motion.li
@@ -74,6 +97,7 @@ const Navbar = () => {
               </Link>
               <Link
                 href="#blog"
+                onClick={handleScroll}
                 className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
               >
                 <motion.li
@@ -86,6 +110,7 @@ const Navbar = () => {
               </Link>
               <Link
                 href="#contact"
+                onClick={handleScroll}
                 className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
               >
                 <motion.li
@@ -109,9 +134,19 @@ const Navbar = () => {
             </Link>
           </div>
           {/* menu icons */}
+          
           <div className="w-6 -h-5 flex flex-col justify-between items-center mdl:hidden text-4xl text-textGreen cursor-pointer overflow-hidden group">
-            <HiMenuAlt3 />
+            <HiMenuAlt3
+              onClick={() => setShowMenu(true)}
+              className="cursor-pointer"
+            />
           </div>
+          {showMenu && (
+            <div
+              ref={(node) => (ref.current = node)}
+              className="absolute mdl:hidden top-0 right-0 w-full h-screenbg-black bg-opacity-50 flex flex-col items-end"
+            ></div>
+          )}
         </div>
       </div>
     </>
