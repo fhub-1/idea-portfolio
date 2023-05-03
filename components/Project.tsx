@@ -31,16 +31,15 @@ const Project = () => {
                 working on building car hring
               </p>
               <h3 className="text-2xl font-bold uppercase">
-                Rent your best car 2.0
+                Rent your Best Car 2.0
               </h3>
               <p className="bg-[#112240] text-sm md:text-base p-2 md:p-6 rounded-md">
-                Upon landing on the website, the user is presented with a
-                homepage that contains a banner image with a{" "}
-                <span className="text-textGreen">call-to-action</span> button
-                that invites the user to start the rental process. Below the
-                banner, there are various sections that provide additional
-                information about the car rental service, such as the available
-                car models, pricing, and location.
+                RentCar is a modern car rental website built with React.js,
+                Tailwind CSS, TypeScript, and Styled Components. Users can
+                browse and select from a variety of cars, view rental rates, and
+                make reservations online. The project is open-source and
+                welcomes contributions. Check out mycar on GitHub to learn more
+                and contribute!
               </p>
               <ul className="text-xs md:text-sm font-titleFonts tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
                 <li>React Js</li>
@@ -96,14 +95,20 @@ const Project = () => {
                 IP ADDRESS TRACKER
               </h3>
               <p className="bg-[#112240] text-sm md:text-base xl:-mr-16 p-2 md:p-6 rounded-md">
-                project description to be added
+                iptracker is a Vue.js-based website that provides users with IP
+                address tracking information. With a simple input of an IP
+                address or domain name, users can view the location, timezone,
+                and internet service provider. The website utilizes a map to
+                visualize the location of the IP address. The project is
+                open-source and welcomes contributions. Check out iptracker on
+                GitHub to learn more and contribute!
               </p>
               <ul className="text-xs md:text-sm font-titleFonts tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
                 <li>React Js</li>
                 <li>Typescript</li>
                 <li>Tailwind CSS</li>
                 <li>Styled-Components</li>
-                <li>Redux</li>
+                <li>Vue js</li>
               </ul>
               <div className="flex gap-4 text-2xl">
                 <Link
