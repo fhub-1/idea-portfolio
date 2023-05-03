@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
+import { FaGithub, FaYoutube, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { RiCloseFill } from "react-icons/ri";
 
@@ -12,6 +13,7 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
+    setShowMenu(false);
     const href = e.currentTarget.href;
     const targetId = href.replace(/.*\#/, "");
     const elem = document.getElementById(targetId);
@@ -25,6 +27,13 @@ const Navbar = () => {
     });
     e.currentTarget.classList.add("active");
   };
+
+  // making the menu go away after clicking the one of the menu items
+  function handleClick(e: any) {
+    if (e.target.contains(ref.current)) {
+      setShowMenu(false);
+    }
+  }
 
   return (
     <>
@@ -145,6 +154,7 @@ const Navbar = () => {
           {showMenu && (
             <div
               ref={(node) => (ref.current = node)}
+              onClick={handleClick}
               className="absolute mdl:hidden top-0 right-0 w-full h-screen bg-black bg-opacity-50 flex flex-col items-end"
             >
               <motion.div
@@ -274,6 +284,34 @@ const Navbar = () => {
                     </motion.button>
                   </Link>
                   {/* footer */}
+                </div>
+                <div className="flex gap-4 mt-10">
+                  <Link href="https://github.com/fhub-1" target="_blank">
+                    <span className="w-10 h-10 text-xl bg-hoverColor rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
+                      <FaGithub />
+                    </span>
+                  </Link>
+                  <Link
+                    href="https://youtube.com/@learnwithjoseph"
+                    target="_blank"
+                  >
+                    <span className="w-10 h-10 text-xl bg-hoverColor rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
+                      <FaYoutube />
+                    </span>
+                  </Link>
+                  <Link href="https://twitter.com/@josehub121" target="_blank">
+                    <span className="w-10 h-10 text-xl bg-hoverColor rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
+                      <FaTwitter />
+                    </span>
+                  </Link>
+                  <Link
+                    href="https://www.linkedin.com/in/joseph-kitheka-4827a01a7/"
+                    target="_blank"
+                  >
+                    <span className="w-10 h-10 text-xl bg-hoverColor rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
+                      <FaLinkedinIn />
+                    </span>
+                  </Link>
                 </div>
               </motion.div>
             </div>
